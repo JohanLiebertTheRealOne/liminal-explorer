@@ -1,0 +1,70 @@
+body
+{
+    color: blue;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars if image goes off-screen */
+}
+
+.tunnel-entrance
+{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image horizontally and vertically */
+    width: 500px;
+    height: 500px;
+    object-fit: cover; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 20px rgba(0, 100, 255, 0.5); /* Optional: glowing effect */
+}
+
+.main-image
+{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image horizontally and vertically */
+    width: 500px;
+    height: 500px;
+    object-fit: cover; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 20px rgba(0, 100, 255, 0.5); /* Optional: glowing effect */
+}
+
+.play-button
+{
+    background-color: black;
+    color: blue;
+    position: absolute;
+    top: 65%;
+    left: 47.25%;
+}
+
+.plot-button
+{
+    background-color: black;
+    color: blue;
+    position: absolute;
+    top: 70%;
+    left: 47.25%;
+}
+
+.plot-text
+{
+    font-size: 24px;
+}
+
+.liminal-space-caption
+{
+    position: absolute;
+    top: 65%;
+    left: 40%;
+}
+
+.stop-button
+{
+    position: absolute;
+    right: 10%;
+}

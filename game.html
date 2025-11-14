@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" id="randomLink">CONTINUE...</a>
+    <a href="main_menu.html" class="stop-button">STOP...</a>
+
+    <!-- Container for the random image -->
+    <img class="main-image" id="randomImage" src="" alt="Random scene" style="display: none;">
+
+    <!-- Container for the random text -->
+    <p class="liminal-space-caption" id="randomText" style="display: none;"></p>
+
+    <script>
+        // List of images to randomly choose from
+        const images = [
+            'images/colored_room.jpg',
+            'images/lspace.png',
+            'images/vintage_classroom.jpg'
+        ];
+
+        // List of texts to randomly choose from
+        const texts = [
+            'You find yourself in a strange room. The walls pulse with an eerie light.',
+            'The air grows thick. Something watches you from the shadows.',
+            'Time feels different here. Minutes stretch into hours.',
+            'A whisper echoes through the corridor, calling your name.',
+            'The tunnel narrows. You must continue forward.'
+        ];
+
+        // Get elements
+        const link = document.getElementById('randomLink');
+        const imageElement = document.getElementById('randomImage');
+        const textElement = document.getElementById('randomText');
+
+        // Add click event listener
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            // Get random indices
+            const randomImageIndex = Math.floor(Math.random() * images.length);
+            const randomTextIndex = Math.floor(Math.random() * texts.length);
+
+            // Display the random image
+            imageElement.src = images[randomImageIndex];
+            imageElement.style.display = 'block';
+
+            // Display the random text
+            textElement.textContent = texts[randomTextIndex];
+            textElement.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
